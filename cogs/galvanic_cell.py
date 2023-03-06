@@ -15,7 +15,9 @@ class Galvanic_Cells(commands.Cog):
             return
         try:
             e1, e2 = args[0], args[1]
+            print(e1, e2)
             cell = chemlib.Galvanic_Cell(e1, e2)
+            cell.draw()
             cell.diagram.save('gcell.png')
             file = discord.File('gcell.png', filename='gcell.png')
             embed = discord.Embed(title=f'{cell.anode[0]}-{cell.cathode[0]} Galvanic Cell', color=0x7b2fde)
