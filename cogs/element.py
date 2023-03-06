@@ -26,5 +26,5 @@ class Elements(commands.Cog):
         await ctx.message.add_reaction(emoji) 
         await ctx.send(embed = embed)
     
-def setup(bot):
-    bot.add_cog(Elements(bot))
+async def setup(bot):
+    await bot.add_cog(Elements(bot))

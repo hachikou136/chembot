@@ -55,5 +55,5 @@ class Quiz(commands.Cog):
                 await ctx.send(embed = embed)
                 break
     
-def setup(bot):
-    bot.add_cog(Quiz(bot))
+async def setup(bot):
+    await bot.add_cog(Quiz(bot))
