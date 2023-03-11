@@ -15,6 +15,7 @@ Mainly changed to accommodate changing specification after discord.py version 2.
 3. fixed to keep alive the bot to work at replit.
 4. stopped loading an extension `quiz.py`, because the extension did not work by an error about PyPDF.
 5. stopped using a file `token.txt` to set bot token for security reason to work as replit machine. and, using an environment variable via a replit feature `secret` instead.
+6. Implemented features served by rdkit library.
 
 ## check the bot status🤖
 
@@ -44,10 +45,12 @@ Usage: ``-elem <symbol>``
 
 Gets the molar mass of a compound, and performs optional calculations.
 
-Usage: ``-cmpd <formula>``
+Usage: ``-cmpd <formula/trival name>``
 
 Additional Parameters (accepts abbreviations): 
 - ``--amount <number and units>``
 - ``--composition <elem symbol>``
+- ``--structural-formula``
+- ``--get-smiles``
 
 ![cmpd](https://user-images.githubusercontent.com/58019082/104853774-e5a53100-58b7-11eb-881a-bd04ad914020.jpg)
