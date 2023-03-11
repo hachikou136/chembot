@@ -110,7 +110,6 @@ class Compounds(commands.Cog):
                     discord.File('output.png')
                 ]
                 embed.set_thumbnail(url = 'attachment://output.png')
-                embed.add_field(name = "not implemented.", value = "", inline = False)
                 await ctx.message.add_reaction(emoji)
                 await ctx.send(files = files, embed = embed)
                 return
