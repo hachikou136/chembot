@@ -20,11 +20,15 @@ class Compounds(commands.Cog):
         try:
             emoji = u"\u2705"
             cmd = vars(cmpd_parser.parse_args(['-cmpd'] + list(args)))
+            print(cmd)
+            print(cmd['cmpd'])
             compound = chemlib.Compound(cmd['cmpd'])
+            print(compound)
             embed = discord.Embed(title=f'{compound.formula} Properties', color=0x7b2fde)
+            print('LINE28.\n')
             if compound.molar_mass() == 0: raise ValueError
             embed.add_field(name = "Molar Mass", value = str(compound.molar_mass()) + ' g/mol', inline=False)
-            
+            print('LINE31\n')
             if cmd['amount'] is not None:
                 amt = cmd['amount']
                 if 'g' in amt: amts = compound.get_amounts(grams = float(amt[:-1]))

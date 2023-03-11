@@ -15,7 +15,7 @@ class Elements(commands.Cog):
             name = element['Element']
             embed = discord.Embed(title= name, color=0x7b2fde)
             embed.set_thumbnail(url=f'https://images-of-elements.com/t/{name.lower()}.png')
-            for property in ('Symbol', 'AtomicNumber', "AtomicMass", "Phase", "AtomicRadius", 'Electronegativity', 'FirstIonization', 'MeltingPoint', "BoilingPoint", 'Config', 'Discoverer', 'Year'):
+            for property in ('Symbol', 'AtomicNumber', 'AtomicMass', 'Neutrons', 'Protons', 'Electrons', 'Period', 'Group', 'Phase', 'Type', 'AtomicRadius', 'Electronegativity', 'FirstIonization', 'MeltingPoint', 'BoilingPoint', 'Config', 'Discoverer', 'Year'):
                 embed.add_field(name = property, value = element[property])
 
             embed.set_footer(text=f"Query by {ctx.author.name}")
